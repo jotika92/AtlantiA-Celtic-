@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AtläntiA | Folk Rock Celta Medieval</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --oro: #d4af37;
+    --verde: #2e7d32;
+    --pergamino: #f3e6c8;
+}
+
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    color: #2b1b00;
+    background: #000;
+}
+
+/* FONDO CELTA GLOBAL */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      url("goblin-piccolo.png") center/120px repeat,
+      url("https://www.transparenttextures.com/patterns/celtic-knot.png");
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 70px 20px;
+    color: var(--oro);
+}
+
+header h1 {
+    font-family: 'Uncial Antiqua';
+    font-size: 4rem;
+    text-shadow: 0 0 15px #00ff9d;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.hero img {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px var(--oro);
+}
+
+/* MONEDAS */
+.coins {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.coin {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff3b0, var(--oro));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #2b1b00;
+    font-weight: bold;
+    box-shadow: 0 0 20px gold;
+    animation: flotar 4s ease-in-out infinite;
+    transition: transform 0.3s;
+}
+
+.coin:nth-child(even) { animation-delay: 1s; }
+
+.coin:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+
+@keyframes flotar {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* SECCIONES */
+section {
+    padding: 80px 15%;
+    background: linear-gradient(#f7edd3, #e9d7a5);
+    border-top: 8px double var(--oro);
+    position: relative;
+}
+
+section::after {
+    content: "🍀";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+}
+
+section h2 {
+    font-family: 'Uncial Antiqua';
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* GALERIA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+.gallery div {
+    height: 180px;
+    border: 3px solid var(--oro);
+    background: url("goblin-piccolo.png") center/contain no-repeat;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: var(--oro);
+    text-align: center;
+    padding: 40px;
+}
+
+/* MÓVIL PERGAMINO */
+@media (max-width: 768px) {
+    body {
+        background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+    }
+    section {
+        padding: 60px 10%;
+        border-radius: 20px;
+        margin: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MÚSICA -->
+<audio autoplay loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+    <h1>AtläntiA</h1>
+    <p>Banda Juglar de Folk Rock Celta Medieval</p>
+</header>
+
+<section class="hero">
+    <img src="goblin-piccolo.png" alt="Goblin y Píccolo">
+
+    <div class="coins">
+        <a class="coin" href="#bio">Biografía</a>
+        <a class="coin" href="#discografia">Discografía</a>
+        <a class="coin" href="#galeria">Galería</a>
+        <a class="coin" href="#noticias">Noticias</a>
+        <a class="coin" href="#tienda">Tienda</a>
+        <a class="coin" href="#contacto">Contratos</a>
+    </div>
+</section>
+
+<section id="bio">
+<h2>Biografía</h2>
+<p>
+AtläntiA surge entre leyendas, hadas y océanos antiguos.
+Goblin y Píccolo custodian su música como guardianes del trébol y la melodía.
+</p>
+</section>
+
+<section id="discografia">
+<h2>Discografía</h2>
+<ul>
+<li>La Atlántida (2025)</li>
+<li>Runas & Trébol</li>
+</ul>
+</section>
+
+<section id="galeria">
+<h2>Galería</h2>
+<div class="gallery">
+<div></div><div></div><div></div>
+</div>
+</section>
+
+<section id="noticias">
+<h2>Noticias</h2>
+<p>Conciertos, rituales musicales y cantos del mar eterno.</p>
+</section>
+
+<section id="tienda">
+<h2>Tienda</h2>
+<p>Arte, discos y reliquias de AtläntiA.</p>
+</section>
+
+<section id="contacto">
+<h2>Contrataciones</h2>
+<p>contacto@atlantiaoficial.com</p>
+</section>
+
+<footer>
+© 2025 AtläntiA · Goblin & Píccolo protegen este portal 🍀
+</footer>
+
+</body>
+</html>
